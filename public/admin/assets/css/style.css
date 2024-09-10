@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+body {
+  background-color: #f9f9f9;
+  font-family: "Tajawal", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+.app-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.app-content .app-menu {
+  width: 18%;
+  flex: 0 0 auto;
+  background: #FFF;
+  min-height: 100vh;
+  padding: 14px;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  z-index: 3;
+}
+
+.app-content.content {
+  display: block;
+  width: 82%;
+  padding-inline: 30px;
+}
+
+.app-content .app-menu ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.app-content .app-menu ul li a {
+  display: block;
+  padding: 14px 20px;
+  background: transparent;
+  transition: 300ms;
+  border-radius: 5px;
+}
+
+.app-content .app-menu ul li a:hover {
+  background: #5046e5;
+  color: #FFF;
+}
+
+.ck-editor__editable[role="textbox"] {
+  /* Editing area */
+  min-height: 300px;
+}
+
+.control-nav {
+  display: flex;
+  min-height: 55px;
+  background: #5046e5;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.control-nav .logo {
+  width: 18%;
+  flex: 0 0 auto;
+  background: #3f36c8;
+}
+
+.control-nav .user {
+  width: 82%;
+  flex: 0 0 auto;
+}
+
+.card-header {
+  background: #FFF;
+}
+
+.control-nav .logo a>img {
+  max-width: 90px;
+  display: block;
+  margin-inline: auto;
+  margin-block-start: 1px;
+  filter: brightness(0)invert(1);
+}
+
+li.dr-menu>a::after {
+  content: "\f078";
+  font-family: 'FontAwesome';
+  position: absolute;
+  left: 16px;
+}
+
+li.dr-menu {
+  position: relative;
+}
+
+.sub-menu {
+  overflow: hidden;
+  transition: height .15s ease;
+}
