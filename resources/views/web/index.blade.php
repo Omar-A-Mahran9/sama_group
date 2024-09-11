@@ -75,7 +75,7 @@
                         <div class="mb-3" style="border-bottom: 1px solid white; width:100%;"></div>
                     </div>
                     <div>
-                        {!! $adsprojects->contentEn !!}
+                        {!! $adsprojects->contentAr !!}
                     </div>
                 </div>
                 <div class="col-md-6 mb-3 pt-5 pb-5">
