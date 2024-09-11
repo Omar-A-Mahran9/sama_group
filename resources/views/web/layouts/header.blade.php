@@ -24,12 +24,15 @@
                                 src="{{ asset('web/assets/images/logo.png') }}" alt=""></a>
                         <button class="" data-navbar-btn><i class="fa-solid fa-xmark"></i></button>
                     </div>
+                    <ul id="primary-menu-two">
+                          <li><a href="{{ url('military-divisions/') }}">القطاع العسكري</a></li>
+                        <li><a href="{{ url('medical-divisions/') }}">القطاع الطبي</a></li>
+                    </ul>
                     <ul id="primary-menu">
                         <li><a href="{{ url('/') }}">الرئيسية</a></li>
                         <li><a href="{{ url('about/') }}">عن سما</a></li>
                         <li><a href="{{ url('civil-divisions/') }}">القطاعات</a></li>
-                        {{-- <li><a href="{{ url('military-divisions/') }}">القطاع العسكري</a></li>
-                        <li><a href="{{ url('medical-divisions/') }}">القطاع الطبي</a></li> --}}
+                      
                         <li><a href="{{ url('projects/') }}">المشاريع</a></li>
                         <li><a href="{{ url('contact/') }}">اتصل بنا</a></li>
                     </ul>

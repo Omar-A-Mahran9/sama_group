@@ -17,6 +17,7 @@ class LoginController extends Controller
     }
     
     public function login(LoginRequest $request) {
+ 
         if(auth()->guard('admin')->attempt(['email'=>$request->input('email'),'password'=>$request->input('password')])){
             return redirect()->route('adminPanel.dashboard');
         }

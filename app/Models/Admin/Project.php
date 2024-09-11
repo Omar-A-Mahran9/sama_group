@@ -19,6 +19,7 @@ class Project extends Model
         'contentEn',
         'image',
         'images',
+        'ads',
     ];
 
 }

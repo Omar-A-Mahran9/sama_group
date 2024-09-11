@@ -20,6 +20,8 @@ class HomeController extends Controller
         $safety = Page::find(2);
         $sliders = Slider::get();
         $projects = Project::get();
+        $adsprojects = Project::where('ads',1)->first();
+
         $divisionsection = Division::where('division_id', 1)->get();
         
         return view('web.index',compact([
@@ -27,7 +29,8 @@ class HomeController extends Controller
             'about',
             'safety',
             'divisionsection',
-            'projects'
+            'projects',
+            'adsprojects'
         ]));
     }
 

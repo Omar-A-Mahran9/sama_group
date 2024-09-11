@@ -88,6 +88,27 @@ header {
   color: #111;
 }
 
+#primary-menu-two{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  gap: 32px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+#primary-menu-two>li>a {
+  display: block;
+  color: #1111119d;
+}
+
+#primary-menu-two>li>a:hover {
+  display: block;
+  color: #111111;
+}
+
 /* Main Slider */
 .main-slider .item {
   height: 600px;
@@ -237,10 +258,41 @@ header {
   transition: 300ms ease;
   overflow: hidden;
   text-align: center;
+  height: 500px;
+}
+
+.project .item figure {
+  margin: 0;
+  height: 100%; /* Ensure the figure takes the full height */
+  position: relative;
+  z-index: 0; /* Set z-index to be behind the overlay */
+}
+
+.project .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire area */
+  position: relative;
+  z-index: 0; /* Ensure image stays behind the overlay */
+}
+.project .item .caption img {
+  width: 150px;
+  /*Adjustsizefortheimage*/height: 150px;
+  /*Adjustsizefortheimage*/object-fit: scale-down;
+  background-color: white;
+  border-radius: 50%;
+  /*Maketheimagecircular*/border: 3px solid #fff;
+  /*Optional:;
+  addawhiteborder*/margin-bottom: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .project .item:hover {
-  transform: translateY(-10px);
+  background-color: #6969695b;
+   transform: translateY(-10px);
 }
 
 .project .item>a {
@@ -251,28 +303,82 @@ header {
 .project .item figure {
   margin: 0;
   overflow: hidden;
-  height: 190px;
 }
 
-.project .item figure img {
+/* Overlay behind the caption */
+.project .item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  opacity: 0; /* Hide by default */
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1; /* Place the overlay on top of the image */
 }
 
-.project .item figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: scale-down;
-}
-
+/* Initially hide the caption */
 .project .item .caption {
-  padding: 16px 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  opacity: 0; /* Hide by default */
+  visibility: hidden; /* Make it not visible before hover */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 2; /* Ensure the caption is above the overlay */
+}
+.ads_section{
+  color: white;
+}
+.card{
+  background-color: transparent;
+ }
+.ads_section .item img {
+  border-radius: 10px;
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
+.ads_section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity for your overlay */
+  z-index: 1;
+}
+ 
+
+
+ 
+
+
+/* Show the caption and overlay on hover */
+.project .item:hover .caption,
+.project .item:hover .overlay {
+  opacity: 1; /* Make both visible */
+  visibility: visible; /* Ensure both are visible */
+}
+
+/* Caption text styling */
 .project .item .caption h3 {
-  font-size: 18px;
+  font-size: 24px; /* Increase size to be more prominent */
   font-weight: 700;
+  margin: 0;
 }
 
 .project .item .caption p.mb-0 {

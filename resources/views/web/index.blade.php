@@ -47,48 +47,96 @@
 
     <div class="divisio section">
         <div class="container">
-            <div class="position-relative">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        @foreach ($divisionsection as $division)
-                            <div class="swiper-slide">
-                                <div class="item">
-                                    <a href="{{ url('division/' . $division->id) }}"></a>
-                                    <figure><img src="{{ asset('images/division/' . $division->image) }}" alt="">
-                                    </figure>
-                                    <h2>{{ $division->titleAr }}</h2>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
 
-                </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+            <div class="row">
+                @foreach ($divisionsection as $division)
+                    <div class="col-md-4">
+                        <div class="item">
+                            <a href="{{ url('division/' . $division->id) }}"></a>
+                            <figure><img src="{{ asset('images/division/' . $division->image) }}" alt="">
+                            </figure>
+                            <h2>{{ $division->titleAr }}</h2>
+                        </div>
+                    </div>
+                @endforeach
+
             </div>
         </div>
     </div>
 
+
+    <div class="ads_section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 p-5">
+                    <div class="head">
+                        <h1 class="fw-bold mb-3">{{ $adsprojects->titleAr }}</h1>
+                        <p class="fw-bold mb-2" style="font-size: 13px">{{ $adsprojects->descriptionAr }}</p>
+                        <div class="mb-3" style="border-bottom: 1px solid white; width:100%;"></div>
+                    </div>
+                    <div>
+                        {!! $adsprojects->contentEn !!}
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3 pt-5 pb-5">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            @php $gallery_ids = explode(',', $adsprojects->images) @endphp
+                            @foreach ($gallery_ids as $x)
+                                <div class="swiper-slide">
+                                    <div class="item card">
+                                        <figure><img src="{{ asset('images/projects/' . $x) }}" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="project section">
         <div class="container">
             <div class="text-center title-head">
-                <h2>مشاريعنا</h2>
+                <h2 class="mb-4">أبرز المشاريع</h2>
+                <p class="text-white">ننفذ مشاريعنا بجدية وتفان , نهتم بأهدافك ونسعى لتحقيقها ونبذل قصارى جهدنا لكسب ثقتك
+                    وبناء علاقات ناجحة طويلة الأمد</p>
             </div>
             <div class="row">
                 @foreach ($projects as $project)
                     <div class="col-md-3">
                         <div class="item">
-                            <a href="{{ url('project/' . $project->id) }}"></a>
-                            <figure><img src="{{ asset('images/projects/' . $project->image) }}" alt=""></figure>
-                            <div class="caption">
-                                <h3>{{ $project->titleAr }}</h3>
-                            </div>
+                            <a href="{{ url('project/' . $project->id) }}">
+
+                                <figure>
+                                    @php $gallery_ids = explode( ',', $project->images ) @endphp
+                                    <img src="{{ asset('images/projects/' . $gallery_ids[0]) }}" alt="">
+                                </figure>
+                                <div class="overlay"></div> <!-- Overlay background -->
+                                <div class="caption">
+                                    <img src="{{ asset('images/projects/' . $project->image) }}" alt="">
+
+                                    <h3>{{ $project->titleAr }}</h3>
+                                </div>
                         </div>
+                        </a>
                     </div>
                 @endforeach
+
             </div>
         </div>
     </div>
+
+
 
     <div class="contact section">
         <div class="container">
@@ -121,3 +169,33 @@
         </div>
     </div>
 @endsection
+<style>
+    .ads_section {
+        background-image: url('{{ asset('images/projects/' . $adsprojects->image) }}');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        /* This ensures the container is positioned relative */
+        padding: 20px 0;
+        /* Adjust padding as needed */
+    }
+
+    .ads_section .container {
+        position: relative;
+        /* Ensure the container is above the background */
+        z-index: 1;
+        /* Make sure container is above the background */
+    }
+
+    .swiper-container {
+        position: relative;
+        z-index: 1;
+        /* Ensure swiper is above the background */
+    }
+
+    .item.card {
+        /* Style your card here if needed */
+    }
+</style>

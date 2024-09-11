@@ -39,6 +39,17 @@
                     <label class="form-label" for="">صور المشروع</label>
                     <input type="file" name="images[]" multiple class="form-control" id="" required>
                 </div>
+                <div class="mb-3">
+                    <label class="form-label">اضافة المشروع في الاعلان</label>
+                    <div class="form-check">
+                        <input type="radio" name="ads" id="adsYes" value="1" class="form-check-input">
+                        <label class="form-check-label" for="adsYes">نعم</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="ads" id="adsNo" value="0" class="form-check-input">
+                        <label class="form-check-label" for="adsNo">لا</label>
+                    </div>
+                </div>
                 <input type="submit" class="btn btn-primary" value="اضافة المشروع">
             </form>
         </div>

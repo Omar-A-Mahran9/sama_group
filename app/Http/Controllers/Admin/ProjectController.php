@@ -47,6 +47,12 @@ class ProjectController extends Controller
             $img->move('images/projects',$images);
             $imagess[] = $images;
         }
+
+        // Check if the new record has 'ads' set to true
+        if (request('ads') == true) {
+            // Update all existing records to set 'ads' to false
+            Project::where('ads', true)->update(['ads' => false]);
+        }
         
         Project::create([
             'titleAr'=> request('titleAr'),
@@ -55,6 +61,7 @@ class ProjectController extends Controller
             'descriptionEn'=> request('descriptionEn'),
             'contentAr'=> request('contentAr'),
             'contentEn'=> request('contentEn'),
+            'ads'=> request('ads'),
             'image' => $file_name,
             'images' => implode(',',$imagess)
         ]);
