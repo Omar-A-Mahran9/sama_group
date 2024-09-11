@@ -19,7 +19,7 @@ class HomeController extends Controller
         $about = Page::find(1);
         $safety = Page::find(2);
         $sliders = Slider::get();
-        $projects = Project::get();
+        $projects = Project::where('ads',0)->get();
         $adsprojects = Project::where('ads',1)->first();
 
         $divisionsection = Division::where('division_id', 1)->get();
