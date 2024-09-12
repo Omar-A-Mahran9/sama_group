@@ -10,11 +10,12 @@
                             @if ($index === 0)
                                 <!-- Video for the first slide -->
                                 <div class="video-container">
-                                    <iframe width="100%" height="100%"
-                                        src="https://www.youtube.com/embed/-ujeq-0VYms?autoplay=1&loop=1&mute=1&controls=0&playlist=-ujeq-0VYms&modestbranding=1&rel=0"
-                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    <iframe id="video-iframe"
+                                        src="https://www.youtube.com/embed/-ujeq-0VYms?autoplay=1&loop=1&mute=1&controls=0&modestbranding=1&rel=0"
+                                        frameborder="0" allow="autoplay; encrypted-media"></iframe>
                                 </div>
                             @endif
+
                             <div class="caption">
                                 <h2>{{ $slider->titleAr }}</h2>
                                 <p class="mb-0">{!! $slider->contentAr !!}</p>
@@ -271,7 +272,7 @@
     var player;
 
     function onYouTubeIframeAPIReady() {
-        player = new YT.Player('video-container', {
+        player = new YT.Player('video-iframe', {
             height: '100%',
             width: '100%',
             videoId: '-ujeq-0VYms',
@@ -291,7 +292,7 @@
     }
 
     function onPlayerReady(event) {
-        // Optional: Pause the video immediately after loading
-        event.target.pauseVideo();
+        // Optional: Start the video immediately after loading
+        event.target.playVideo();
     }
 </script>

@@ -1,9 +1,17 @@
 const swiper = new Swiper(".swiper", {
-    loop: true,
+    loop: true, // Enable looping
+    autoplay: {
+        delay: 6000, // Change slide every 3 seconds
+        disableOnInteraction: true, // Continue autoplay after interaction
+    },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    effect: "fade", // You can use other effects like 'fade', 'cube', 'coverflow'
+
+    speed: 1500, // Transition speed
+ 
 });
 
 const swiperDivisio = new Swiper(".divisio .swiper", {
