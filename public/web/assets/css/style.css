@@ -207,6 +207,11 @@ header {
   z-index: 2;
 }
 
+.divisio .item {
+  position: relative; /* Ensure the item container is positioned relative */
+  overflow: hidden;
+}
+
 .divisio .item>figure {
   overflow: hidden;
   height: 200px;
@@ -222,43 +227,32 @@ header {
 }
 
 .divisio .item:hover>figure>img {
-  scale: 1.1;
+  transform: scale(1.1); /* Updated to use 'transform' for scaling */
 }
 
 .divisio .item>h2 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+   position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for true center */
   width: 100%;
   padding: 16px;
   margin: 0;
   z-index: 1;
   color: #FFF;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 700;
+  text-align: center; /* Center text horizontally */
 }
-.divisio .item>.text2 {
-  position: absolute;
-  bottom: 0;
-  /*Startatthebottom*/left: 0;
-  width: 100%;
-  opacity: 0;
- 
-}
+
+
+
 .ads_section .swip{
   overflow: hidden;
  }
-.divisio .item:hover >h2 {
-    opacity: 0; /* Make it visible */
- }
+ 
 
-.divisio .item:hover >.text2 {
-  font-size: 28px;
-  bottom: 40%; /* Move the text to 40% from the bottom */
-  text-align: center; /* Center the text inside */
-  opacity: 1; /* Make it visible */
-  transition: all 0.3s ease-in-out; /* Smooth transition */
-}
+ 
 
 .divisio .item::after {
   content: '';
@@ -376,7 +370,7 @@ header {
 .ads_section .item img {
   border-radius: 10px;
   width: 100%;
-  height: 440px;
+  height: 160px;
   object-fit: cover;
 
   -webkit-border-radius: 10px;
@@ -649,7 +643,6 @@ textarea.form-control {
 
 
 .results .item {
-  
   cursor: default; /* or pointer, if you want a hand cursor on hover */
   transition: transform 0.3s ease; /* Adjust the duration and timing function as needed */
 }
