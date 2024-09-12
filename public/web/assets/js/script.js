@@ -31,7 +31,10 @@ const swiperDivisio = new Swiper(".divisio .swiper", {
         },
     },
 });
+
 var animate_swiper = new Swiper(".swiper-container", {
+    slidesPerView: 3,
+    spaceBetween: 10,
     loop: true, // Enable looping
     autoplay: {
         delay: 3000, // Change slide every 3 seconds
@@ -45,7 +48,7 @@ var animate_swiper = new Swiper(".swiper-container", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    effect: "flip", // You can use other effects like 'fade', 'cube', 'coverflow'
+    effect: "stack", // You can use other effects like 'fade', 'cube', 'coverflow'
     speed: 1500, // Transition speed
 });
 
