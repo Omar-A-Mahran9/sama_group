@@ -144,6 +144,76 @@ header {
   opacity: 35%;
 }
 
+/* Ensure the swiper container fills its parent */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Ensure each slide takes full size */
+.swiper-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Hide any overflow */
+}
+
+/* Style the item to cover the entire slide */
+.main-slider .item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Style the video container to cover the full slide */
+.main-slider .video-container {
+  object-fit: cover; /* Ensure the video covers the container */
+
+}
+
+.main-slider .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the container */
+}
+
+/* Center the caption */
+.main-slider .item .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFF;
+  width: 90%; /* Adjust as needed */
+  max-width: 610px; /* Maximum width */
+  z-index: 2; /* Ensure it's above the video */
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Styling for heading and paragraph in caption */
+.main-slider .item .caption h2 {
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 27px;
+}
+
+/* Optional: Dark overlay to enhance text readability */
+.main-slider .item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #000000;
+  opacity: 35%;
+  z-index: 1; /* Ensure it’s between video and caption */
+}
+
 /* About */
 .about .inner b {
   font-size: 90px;
@@ -559,6 +629,9 @@ header {
   background: #9E9E9E;
   padding: 15px 50px;
 }
+
+ 
+ 
 
 .head-page .container {
   padding-block-start: 179px;

@@ -4,20 +4,26 @@
     <div class="main-slider">
         <div class="swiper">
             <div class="swiper-wrapper">
-                @foreach ($sliders as $slider)
+                @foreach ($sliders as $index => $slider)
                     <div class="swiper-slide">
                         <div class="item" style="background-image: url({{ asset('images/sliders/' . $slider->image) }})">
-                            <div class="container">
-                                <div class="caption">
-                                    <h2>{{ $slider->titleAr }}</h2>
-
-                                    <p class="mb-0">{!! $slider->contentAr !!}</p>
+                            @if ($index === 0)
+                                <!-- Video for the first slide -->
+                                <div class="video-container">
+                                    <iframe width="100%" height="100%"
+                                        src="https://www.youtube.com/embed/-ujeq-0VYms?autoplay=1&loop=1&mute=1&controls=0&playlist=-ujeq-0VYms&modestbranding=1&rel=0"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                 </div>
+                            @endif
+                            <div class="caption">
+                                <h2>{{ $slider->titleAr }}</h2>
+                                <p class="mb-0">{!! $slider->contentAr !!}</p>
                             </div>
                         </div>
                     </div>
                 @endforeach
             </div>
+
 
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -159,7 +165,7 @@
         <div class="container">
             <div class="row align-items-end">
                 <div class="col-md-6 mb-3 p-5">
-                    <div class="head text-center text-md-start"  >
+                    <div class="head text-center text-md-start">
                         @php
                             $words = explode(' ', $adsprojects->titleAr, 2); // Split the string into two parts: first word and the rest
                         @endphp
@@ -218,7 +224,7 @@
                                 </figure>
                                 <div class="overlay"></div> <!-- Overlay background -->
                                 <div class="caption">
- 
+
                                     <h3>{{ $project->titleAr }}</h3>
                                 </div>
                         </div>
@@ -260,3 +266,32 @@
         /* Style your card here if needed */
     }
 </style>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('video-container', {
+            height: '100%',
+            width: '100%',
+            videoId: '-ujeq-0VYms',
+            playerVars: {
+                autoplay: 1,
+                loop: 1,
+                mute: 1,
+                controls: 0,
+                playlist: '-ujeq-0VYms',
+                modestbranding: 1,
+                rel: 0
+            },
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        // Optional: Pause the video immediately after loading
+        event.target.pauseVideo();
+    }
+</script>
