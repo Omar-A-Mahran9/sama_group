@@ -161,11 +161,11 @@
                 <div class="col-md-6 mb-3 p-5">
                     <div class="head text-center text-md-start"  >
                         @php
-                            $words = explode(' ', $adsprojects->titleAr, 3); // Split the string into two parts: first word and the rest
+                            $words = explode(' ', $adsprojects->titleAr, 2); // Split the string into two parts: first word and the rest
                         @endphp
 
-                        <h1 style="font-size: 80px">{{ $words[1] }}<br><span
-                                class="fw-bold">{{ $words[2] ?? '' }}</span></h1>
+                        <h1 style="font-size: 80px">{{ $words[0] }}<br><span
+                                class="fw-bold">{{ $words[1] ?? '' }}</span></h1>
                         {{-- <h1 class="fw-bold mb-3">{{ $adsprojects->titleAr }}</h1> --}}
                         <p class="mb-2" style="font-size: 50px">{{ $adsprojects->descriptionAr }}</p>
                     </div>
