@@ -158,6 +158,21 @@ header {
   overflow: hidden; /* Hide any overflow */
 }
 
+.swiper-slide img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /*Hideanyoverflow*/border-radius: 10px ;
+}
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.03; /* Adjust the opacity to make it more transparent */
+  width: 50%; /* Adjust the size of the watermark as needed */
+}
 /* Style the item to cover the entire slide */
 .main-slider .item {
   position: relative;
@@ -619,16 +634,15 @@ header {
 }
 
 .head-page h2 {
-  margin: 0;
-  position: relative;
+   position: relative;
   z-index: 1;
   color: #fff;
-  font-size: 28px;
+  font-size: 38px;
   font-weight: bold;
   width: fit-content;
-  background: #9E9E9E;
-  padding: 15px 50px;
-}
+   padding-bottom: 10px ;
+   border-bottom: 5px solid white;
+  margin: auto;}
 
  
  
@@ -743,6 +757,39 @@ textarea.form-control {
   pointer-events: none; /* Ensures the pattern does not interfere with interactions */
 }
 
+.aboutt {
+  position: relative;
+   background-image: url('../images/1710874861.jpg');
+   background-size: cover; /* Ensures the background covers the entire area */
+   background-position: center; /* Centers the background */
+   background-repeat: no-repeat; /* Prevents the background from repeating */
+   background-attachment: fixed; /* Keeps the background fixed during scrolling */
+
+   
+}
+
+
+.aboutt .item {
+  z-index:1;
+  cursor: default; /* or pointer, if you want a hand cursor on hover */
+  transition: transform 0.3s ease; /* Adjust the duration and timing function as needed */
+}
+
+ 
+
+
+.aboutt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  background-size: 40px 40px;
+   opacity: 1; /* 50% opacity for the pattern */
+  pointer-events: none; /* Ensures the pattern does not interfere with interactions */
+}
 
 @media (max-width:992px) {
   .video-container{

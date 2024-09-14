@@ -14,6 +14,8 @@
                                         src="https://www.youtube.com/embed/-ujeq-0VYms?autoplay=1&loop=1&mute=1&controls=0&modestbranding=1&rel=0"
                                         frameborder="0" allow="autoplay; encrypted-media"></iframe>
                                 </div>
+                                <div class="video-overlay">
+                                </div>
                             @endif
 
                             <div class="caption">
@@ -233,6 +235,37 @@
                     </div>
                 @endforeach
 
+            </div>
+        </div>
+    </div>
+
+    <div class="contact section">
+        <div class="container">
+            <div class="title-head text-center">
+                <h2>اتصل بنا</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="inner-contact">
+                        <h3>المكتب الرئيسي</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i> 3939 طريق مكة المكرمة، حي الضباط
+                                <br>
+                                صندوق البريد 27361 الرياض 12623
+                                <br>
+                                الرياض، المملكة العربية السعودية
+                            </li>
+                            <li><i class="fa-solid fa-phone"></i> 4545454 11 966+ </li>
+                            <li><i class="fa-solid fa-fax"></i> 4545454 11 966+</li>
+                            <li><i class="fa-solid fa-mobile-screen-button"></i> 50100383 966+</li>
+                            <li><i class="fa-solid fa-envelope"></i> contact@samaa-group.com</li>
+                            <li><i class="fa-solid fa-globe"></i> www.samaa-group.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <figure class="mb-0"><img src="{{ asset('web/assets/images/map.png') }}" alt=""></figure>
+                </div>
             </div>
         </div>
     </div>
