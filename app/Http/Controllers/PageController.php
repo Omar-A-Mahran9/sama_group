@@ -20,7 +20,7 @@ class PageController extends Controller
 
     public function projects() {
         $projects = Project::get();
-        $page = Page::where('id',1)->get();
+        $page = Page::get();
 
         return view('web.projects',compact('projects','page'));
     }
