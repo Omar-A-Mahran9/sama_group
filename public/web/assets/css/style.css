@@ -363,6 +363,11 @@ header {
   color: #FFF;
 }
 
+.singleproj{
+  width: 320px !important;
+  height: 200px !important;
+}
+
 .project .item {
   width: 250px;
    position: relative;
