@@ -2,9 +2,9 @@
 @section('title', ' - المشاريع')
 
 @section('content')
-<div class="head-page" style="background-image: url({{ asset('images/pages/' . $page[1]->image) }})">
+<div class="head-page" style="background-image: url({{ asset('images/pages/' . $page[2]->image) }})">
     <div class="container">
-        <h2>{{ $page[1]->titleAr }}</h2>
+        <h2>{{ $page[2]->titleAr }}</h2>
     </div>
 </div>
  
