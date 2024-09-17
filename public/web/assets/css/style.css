@@ -418,6 +418,52 @@ header {
   inset: 0;
 }
 
+.itemproject {
+  height: 400px; /* Adjust height as needed */
+  overflow: hidden; /* Hide any overflow to ensure the image doesn't spill outside the container */
+  position: relative; /* Positioning context for the img */
+}
+
+.itemproject img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+  position: absolute; /* Absolute positioning to cover the parent container */
+  top: 0;
+  left: 0;
+}
+
+.project-container {
+  position: relative; /* Position context for the pseudo-element */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url('../images/Background.jpg');
+  background-size: cover; /* Ensure the background image covers the container */
+  background-position: center; /* Center the background image */
+  
+  background-repeat: no-repeat; /* Prevent repeating the background image */
+  overflow: hidden; /* Hide any overflow from the pseudo-element */
+}
+
+/* Overlay using pseudo-element */
+.project-container::before {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute; /* Position it absolutely within the container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Black overlay with 50% opacity */
+  z-index: 1; /* Ensure the overlay is above the background but below other content */
+}
+
+/* Ensure content inside the container appears above the overlay */
+.project-container > * {
+  position: relative; /* Position context for stacking order */
+  z-index: 2; /* Ensure content is above the overlay */
+}
+
+
 .project .item figure {
   margin: 0;
   overflow: hidden;

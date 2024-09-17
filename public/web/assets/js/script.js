@@ -56,7 +56,7 @@ var animate_swiper = new Swiper(".swiper-container", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    effect: "stack", // You can use other effects like 'fade', 'cube', 'coverflow'
+    effect: "coverflow", // You can use other effects like 'fade', 'cube', 'coverflow'
     speed: 1500, // Transition speed
 });
 
