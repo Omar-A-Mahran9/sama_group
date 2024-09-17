@@ -440,7 +440,8 @@ header {
   background-image: url('../images/Background.jpg');
   background-size: cover; /* Ensure the background image covers the container */
   background-position: center; /* Center the background image */
-  
+  background-attachment: fixed; /* Ensure the background image covers the container */
+
   background-repeat: no-repeat; /* Prevent repeating the background image */
   overflow: hidden; /* Hide any overflow from the pseudo-element */
 }
