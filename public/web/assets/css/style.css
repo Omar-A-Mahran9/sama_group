@@ -461,7 +461,7 @@ header {
 /* Ensure content inside the container appears above the overlay */
 .project-container > * {
   position: relative; /* Position context for stacking order */
-  z-index: 2; /* Ensure content is above the overlay */
+  z-index: 1; /* Ensure content is above the overlay */
 }
 
 
