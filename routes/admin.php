@@ -21,22 +21,22 @@ use App\Http\Controllers\Admin\MessageController;
 |
 */
 
-Route::group(['prefix'=>'adminPanel','middleware'=> 'auth:admin'],function(){
-    Route::get('dashboard',[DashboardController::class,'index'])->name('adminPanel.dashboard');
+// Route::group(['prefix'=>'adminPanel','middleware'=> 'auth:admin'],function(){
+//     Route::get('dashboard',[DashboardController::class,'index'])->name('adminPanel.dashboard');
 
-    Route::resource('dashboard/slider',SliderController::class);
-    Route::resource('dashboard/pages',PageController::class);
-    Route::resource('dashboard/division/category',DivisionSectionController::class);
-    Route::resource('dashboard/division/post',DivisionController::class);
+//     Route::resource('dashboard/slider',SliderController::class);
+//     Route::resource('dashboard/pages',PageController::class);
+//     Route::resource('dashboard/division/category',DivisionSectionController::class);
+//     Route::resource('dashboard/division/post',DivisionController::class);
     
-    Route::resource('dashboard/project',ProjectController::class);
-    Route::get('dashboard/contact',[MessageController::class,'dashboard'])->name('contact');
-});
+//     Route::resource('dashboard/project',ProjectController::class);
+//     Route::get('dashboard/contact',[MessageController::class,'dashboard'])->name('contact');
+// });
 
-Route::get('/adminPanel/logout',[LoginController::class,'logout'])->name('adminPanel.logout');
+// Route::get('/adminPanel/logout',[LoginController::class,'logout'])->name('adminPanel.logout');
 
-Route::group(['prefix'=>'adminPanel','middleware'=> 'guest:admin'],function(){
-    Route::get('/login',[LoginController::class,'view_login_form'])->name('adminPanel.showlogin');
-    Route::post('login',[LoginController::class,'login'])->name('adminPanel.login');
+// Route::group(['prefix'=>'adminPanel','middleware'=> 'guest:admin'],function(){
+//     Route::get('/login',[LoginController::class,'view_login_form'])->name('adminPanel.showlogin');
+//     Route::post('login',[LoginController::class,'login'])->name('adminPanel.login');
 
-});
+// });

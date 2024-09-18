@@ -19,7 +19,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-4" id="presdent_talk">
+            <div class="col-md-4 col-12" id="presdent_talk">
                 <div class="links">
                     <a href="#presdent_talk">كلمة الرئيس</a>
                     <a href="#history">تاريخ الشركة</a>
@@ -29,7 +29,7 @@
                     <a href="#enviro">البيئة والاستدامة</a>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 col-12">
                 <div id="history" class="inner-content mb-5">
                     <h3 class="mb-3 fw-bold">كلمة الرئيس</h3>
                     <p style="text-align: justify; line-height:32px">

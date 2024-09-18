@@ -61,9 +61,9 @@
                 <h2 class="mb-4"> قطاعاتنا</h2>
 
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 @foreach ($divisionsection as $division)
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-6">
                         <div class="item">
                             <a href="{{ url('division/' . $division->id) }}"></a>
                             <figure><img src="{{ asset('images/division/' . $division->image) }}" alt="">
@@ -81,72 +81,62 @@
     <div class="results pb-4 pt-5">
         <div class="container">
             <div class="row align-items-center justify-content-center">
-                <div class="item col-12 col-md-2 mb-4 text-white text-center">
+                <div class="item col-4 col-md-2 mb-4 text-white text-center">
                     <div class="d-flex gap-3 justify-content-center align-items-center">
 
 
-                        <h1 style="font-size: 60px;" class="fw-bold mt-2">
+                        <h1 class="fw-bold mt-2">
                             50
                         </h1>
 
 
                     </div>
-                    <div style="width: 50%; margin: 0 auto; text-align: center;">
-                        <p>عام من العطاء</p>
-                    </div>
+                    <p>عام من العطاء</p>
                 </div>
 
-                <div class="item col-12 col-md-2 mb-4 text-white text-center">
+                <div class="item col-4 col-md-2 mb-4 text-white text-center">
                     <div class="d-flex gap-1 justify-content-center align-items-center">
 
-                        <h1 style="font-size: 60px;" class="fw-bold mt-2">
-                            <span style="font-size: 60px;">+</span>12
+                        <h1 class="fw-bold mt-2">
+                            <span>+</span>12
                         </h1>
 
                     </div>
-                    <div style="width: 50%; margin: 0 auto; text-align: center;">
-                        <p> قـطـاع وتخصـص</p>
-                    </div>
+                    <p> قـطـاع وتخصـص</p>
                 </div>
-                <div class="item col-12 col-md-2 mb-4 text-white text-center">
+                <div class="item col-4 col-md-2 mb-4 text-white text-center">
                     <div class="d-flex gap-3 justify-content-center align-items-center">
-                        <h1 style="font-size: 60px;" class="fw-bold mt-2">
-                            <span style="font-size: 60px;">+</span>30
+                        <h1 class="fw-bold mt-2">
+                            <span>+</span>30
                         </h1>
 
                     </div>
-                    <div style="width: 50%; margin: 0 auto; text-align: center;">
-                        <p>جــســـر ونـفــق</p>
-                    </div>
+                    <p>جــســـر ونـفــق</p>
                 </div>
-                <div class="item col-12 col-md-2 text-white text-center" style="margin-bottom:20px;">
+                <div class="item col-4 col-md-2 text-white text-center" style="margin-bottom:20px;">
                     <div class="d-flex gap-1 justify-content-center align-items-center">
-                        <h1 class="fw-bold  " style="font-size: 60px;">
-                            <span style="font-size: 60px;">+</span>1M
+                        <h1 class="fw-bold  ">
+                            <span>+</span>1M
                         </h1>
 
 
                     </div>
-                    <div style="width: 60%; margin: 0 auto; text-align: center;">
-                        <p> كلم<sup>٢</sup> شــــوارع مسفلتة</p>
-                    </div>
+                    <p> كلم<sup>٢</sup> شــــوارع مسفلتة</p>
                 </div>
-                <div class="item col-12 col-md-2 mb-4 text-white text-center">
+                <div class="item col-4 col-md-2 mb-4 text-white text-center">
                     <div class="d-flex gap-1 justify-content-center align-items-center">
-                        <h1 class="fw-bold mt-2" style="font-size: 60px;">
-                            <span style="font-size: 60px;">+</span>300
+                        <h1 class="fw-bold mt-2">
+                            <span>+</span>300
                         </h1>
 
                     </div>
-                    <div style="width: 50%; margin: 0 auto; text-align: center;">
-                        <p>مـهنــدس وفــنـــي</p>
-                    </div>
+                    <p>مـهنــدس وفــنـــي</p>
                 </div>
-                <div class="item col-12 col-md-2  text-white text-center" style="margin-bottom:21px;">
+                <div class="item col-4 col-md-2  text-white text-center" style="margin-bottom:21px;">
                     <div class="d-flex gap-1 justify-content-center align-items-center">
 
-                        <span class="fw-bold" style="font-size: 60px;">B</span>
-                        <h1 class="fw-bold mt-2" style="font-size: 60px;">
+                        <span class="fw-bold">B</span>
+                        <h1 class="fw-bold mt-2">
                             8.2
                         </h1>
 
@@ -154,9 +144,9 @@
 
 
                     </div>
-                    <div style="width: 80%; margin: 0 auto; text-align: center;">
-                        <p>قيمة المشاريع القائمة</p>
-                    </div>
+
+                    <p>قيمة المشاريع القائمة</p>
+
                 </div>
 
             </div>
@@ -167,7 +157,7 @@
     <div class="ads_section">
         <div class="container">
             <div class="row align-items-end">
-                <div class="col-md-6 mb-3 p-5">
+                <div class="col-md-6 mb-3 p-md-5">
                     <div class="head text-center text-md-start">
                         @php
                             $words = explode(' ', $adsprojects->titleAr, 2); // Split the string into two parts: first word and the rest
@@ -178,8 +168,9 @@
                         {{-- <h1 class="fw-bold mb-3">{{ $adsprojects->titleAr }}</h1> --}}
                         <p class="mb-2" style="font-size: 50px">{{ $adsprojects->descriptionAr }}</p>
                     </div>
-                    <div class="text-center text-md-start w-md-100">
-                        <p style="font-size: 25px; width:85%"> {!! $adsprojects->contentAr !!}
+                    <div class="text-center text-md-start w-md-100 ">
+                        <p style="font-size: 25px; width:85%" class="text-md-start text-center m-auto m-md-1 ">
+                            {!! $adsprojects->contentAr !!}
                         </p>
                     </div>
                 </div>
@@ -215,9 +206,9 @@
                 <h2 class="mb-4">أبرز المشاريع</h2>
 
             </div>
-            <div class="row gap-5">
+            <div class="row gap-md-5 justify-content-center align-items-center m-auto">
                 @foreach ($projects as $project)
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-6 mb-m-1 mb-4">
                         <div class="item">
                             <a href="{{ url('project/' . $project->id) }}">
 
