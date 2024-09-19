@@ -2,12 +2,12 @@
 @section('title', ' - المشاريع')
 
 @section('content')
-<div class="head-page" style="background-image: url({{ asset('images/pages/' . $page[2]->image) }})">
-    <div class="container">
-        <h2>{{ $page[2]->titleAr }}</h2>
+    <div class="head-page" style="background-image: url({{ asset('images/pages/' . $page[2]->image) }})">
+        <div class="container">
+            <h2>{{ $page[2]->titleAr }}</h2>
+        </div>
     </div>
-</div>
- 
+
 
     <nav aria-label="breadcrumb">
         <div class="container">
@@ -19,12 +19,12 @@
     </nav>
 
     <div class="project single">
-        <div class="container mb-5">
-            <div class="row gap-4 justify-content-center">
+        <div class="container mb-5 ">
+            <div class="row  gap-md-4 justify-content-center  m-auto">
                 @foreach ($projects as $project)
                     @php $gallery_ids = explode(',', $project->images) @endphp
 
-                    <div class="col-md-3" style="cursor: pointer;">
+                    <div class="col-md-3 col-6 mb-4" style="cursor: pointer;">
                         <div class="item singleproj">
                             <a href="{{ url('project/' . $project->id) }}">
 

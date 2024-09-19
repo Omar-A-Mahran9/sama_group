@@ -21,6 +21,7 @@
         <div class="row">
             <div class="col-md-4 col-12" id="presdent_talk">
                 <div class="links">
+
                     <a href="#presdent_talk">كلمة الرئيس</a>
                     <a href="#history">تاريخ الشركة</a>
                     <a href="#value">قيم سما</a>
@@ -55,7 +56,10 @@
                         <p>سلطان بن سلمان سليم الصاعدي</p>
                     </div>
 
+                    <hr class="mob" style="border:2px solid #128977">
+
                 </div>
+
                 <div id="value" class="inner-content mb-5">
                     <h3 class="mb-3 fw-bold">مجموعة ســــــــــــــما (منذ 1990)</h3>
                     <p style="text-align: justify; line-height:32px">كوننا مجموعة إنشاءات تأسست في عام 1990، فقد شهدنا نموًا
@@ -70,7 +74,7 @@
 
         </div>
     </div>
-    <div id="saftey" class="aboutt pb-4 pt-5" >
+    <div id="saftey" class="aboutt pb-4 pt-5">
         <div class="container">
             <div class="row align-items-center justify-content-center gap-5">
 
@@ -172,6 +176,8 @@
         </div>
 
     </div>
+    <hr class="mob" style="border:2px solid #128977">
+
     <div id="enviro" class="container mt-5 mb-5">
         <div class="row">
             <h3 class="fw-bold mb-4">الجودة وسرعة اإلنتاجية</h3>
@@ -194,17 +200,21 @@
             </div>
 
         </div>
-        <div class="row mt-5">
-            <div class="col-12 col-md-3"> <img src="{{ asset('../images/abouts/logo1.png') }}" alt="" width=250>
+        <div class="row mt-5 m-auto">
+            <div class="col-6 col-md-3 2-"> <img src="{{ asset('../images/abouts/logo1.png') }}" alt=""
+                    class="sup">
             </div>
-            <div class="col-12 col-md-3"> <img src="{{ asset('../images/abouts/logo2.png') }}" alt="" width=250>
+            <div class="col-6 col-md-3"> <img src="{{ asset('../images/abouts/logo2.png') }}" alt="" class="sup">
             </div>
-            <div class="col-12 col-md-3"> <img src="{{ asset('../images/abouts/logo3.png') }}" alt="" width=250>
+            <div class="col-6 col-md-3"> <img src="{{ asset('../images/abouts/logo3.png') }}" alt=""
+                    class="sup">
             </div>
-            <div class="col-12 col-md-3"> <img src="{{ asset('../images/abouts/logo4.png') }}" alt="" width=250>
+            <div class="col-6 col-md-3"> <img src="{{ asset('../images/abouts/logo4.png') }}" alt=""
+                    class="sup">
             </div>
         </div>
     </div>
+
     <div style="background-color: #128977" class="p-4">
         <div class="container mt-5 mb-5 text-white">
             <div class="row justify-content-center">
@@ -245,43 +255,53 @@
         </div>
     </div>
 
+
     <div class="container position-relative">
-        <div class="row mt-5 justify-content-center">
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp1.png') }}" alt="" width=250>
+        <div class="row mt-5 justify-content-center align-items-center m-auto">
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp1.png') }}"
+                    alt="">
             </div>
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp2.png') }}" alt="" width=250>
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp2.png') }}"
+                    alt="">
             </div>
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp3.png') }}" alt="" width=250>
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp3.png') }}"
+                    alt="">
             </div>
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp4.png') }}" alt="" width=250>
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp4.png') }}"
+                    alt="">
             </div>
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp5.png') }}" alt="" width=250>
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp5.png') }}"
+                    alt="">
             </div>
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp6.png') }}" alt="" width=250>
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp6.png') }}"
+                    alt="">
             </div>
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp7.png') }}" alt="" width=250>
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp7.png') }}"
+                    alt="">
             </div>
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp8.png') }}" alt="" width=250>
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp8.png') }}"
+                    alt="">
             </div>
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp9.png') }}" alt="" width=250>
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp9.png') }}"
+                    alt="">
             </div>
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp10.png') }}" alt=""
-                    width=250>
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp10.png') }}"
+                    alt="">
             </div>
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp11.png') }}" alt=""
-                    width=250>
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp11.png') }}"
+                    alt="">
             </div>
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp12.png') }}" alt=""
-                    width=250>
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp12.png') }}"
+                    alt="">
             </div>
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp13.png') }}" alt=""
-                    width=250>
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp13.png') }}"
+                    alt="">
             </div>
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp14.png') }}" alt=""
-                    width=250>
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp14.png') }}"
+                    alt="">
             </div>
-            <div class="col-12 col-md-2"> <img src="{{ asset('../images/abouts/comp15.png') }}" alt=""
-                    width=250>
+            <div class="col-4 col-md-2"> <img class="sup1" src="{{ asset('../images/abouts/comp15.png') }}"
+                    alt="">
             </div>
         </div>
         <img src="{{ asset('web/assets/images/logo.png') }}" alt="Watermark" class="watermark">
