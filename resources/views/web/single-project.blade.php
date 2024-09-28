@@ -4,23 +4,23 @@
 @section('content')
     <div class="head-page" style="background-image: url({{ asset('images/projects/' . $project[0]->image) }})">
         <div class="container">
-            <h2>{{ $project[0]->titleAr }}</h2>
+            <h2>{{ $project[0]->title }}</h2>
         </div>
     </div>
 
     <nav aria-label="breadcrumb">
         <div class="container">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ url('/') }}">الرئيسية</a></li>
-                <li class="breadcrumb-item"><a href="{{ url('projects/') }}">المشاريع</a></li>
-                <li class="breadcrumb-item active" aria-current="project">{{ $project[0]->titleAr }}</li>
+                <li class="breadcrumb-item"><a href="{{ url('/') }}">{{ __('HOME') }}</a></li>
+                <li class="breadcrumb-item"><a href="{{ url('projects/') }}">{{ __('PROJECTS') }}</a></li>
+                <li class="breadcrumb-item active" aria-current="project">{{ $project[0]->title }}</li>
             </ol>
         </div>
     </nav>
 
     <div class="container inner-content project">
-        {!! $project[0]->contentAr !!}
-        <h3>صور المشروع</h3>
+        {!! $project[0]->content!!}
+        <h3>{{__("Project images")}}</h3>
     </div>
     <div class="project-container">
 

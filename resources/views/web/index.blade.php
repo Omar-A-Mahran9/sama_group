@@ -58,7 +58,7 @@
     <div class="divisio section">
         <div class="container">
             <div class="text-center title-head">
-                <h2 class="mb-4"> قطاعاتنا</h2>
+                <h2 class="mb-4"> {{ __('Our DIVISIONS') }}</h2>
 
             </div>
             <div class="row justify-content-center">
@@ -89,7 +89,7 @@
                     </div>
                     <p>{{ __('Years of Giving') }}</p>
                 </div>
-    
+
                 <div class="item col-4 col-md-2 mb-4 text-white text-center">
                     <div class="d-flex gap-1 justify-content-center align-items-center">
                         <h1 class="fw-bold mt-2">
@@ -98,7 +98,7 @@
                     </div>
                     <p>{{ __('Sectors and Specializations') }}</p>
                 </div>
-    
+
                 <div class="item col-4 col-md-2 mb-4 text-white text-center">
                     <div class="d-flex gap-3 justify-content-center align-items-center">
                         <h1 class="fw-bold mt-2">
@@ -107,7 +107,7 @@
                     </div>
                     <p>{{ __('Bridges and Tunnels') }}</p>
                 </div>
-    
+
                 <div class="item col-4 col-md-2 text-white text-center" style="margin-bottom:20px;">
                     <div class="d-flex gap-1 justify-content-center align-items-center">
                         <h1 class="fw-bold ">
@@ -116,7 +116,7 @@
                     </div>
                     <p>{{ __('km² Paved Streets') }}</p>
                 </div>
-    
+
                 <div class="item col-4 col-md-2 mb-4 text-white text-center">
                     <div class="d-flex gap-1 justify-content-center align-items-center">
                         <h1 class="fw-bold mt-2">
@@ -125,7 +125,7 @@
                     </div>
                     <p>{{ __('Engineers and Technicians') }}</p>
                 </div>
-    
+
                 <div class="item col-4 col-md-2 text-white text-center" style="margin-bottom:21px;">
                     <div class="d-flex gap-1 justify-content-center align-items-center">
                         <span class="fw-bold">B</span>
@@ -138,7 +138,7 @@
             </div>
         </div>
     </div>
-    
+
 
 
     <div class="ads_section">
@@ -206,7 +206,7 @@
                                 <div class="overlay"></div> <!-- Overlay background -->
                                 <div class="caption">
 
-                                    <h3>{{ $project->title}}</h3>
+                                    <h3>{{ $project->title }}</h3>
                                 </div>
                         </div>
                         </a>
@@ -228,7 +228,7 @@
                         <h3>{{ __('Head Office') }}</h3>
                         <ul>
                             <li>
-                                <i class="fa-solid fa-location-dot"></i> 
+                                <i class="fa-solid fa-location-dot"></i>
                                 {{ __('3939 Makkah Road, Officers District') }}
                                 <br>
                                 {{ __('P.O. Box 27361, Riyadh 12623') }}
@@ -249,7 +249,6 @@
             </div>
         </div>
     </div>
-    
 @endsection
 <style>
     .ads_section {
