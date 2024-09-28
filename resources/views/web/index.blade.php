@@ -19,8 +19,8 @@
                             @endif
 
                             <div class="caption">
-                                <h2>{{ $slider->titleAr }}</h2>
-                                <p class="mb-0">{!! $slider->contentAr !!}</p>
+                                <h2>{{ $slider->title }}</h2>
+                                <p class="mb-0">{!! $slider->content !!}</p>
                             </div>
                         </div>
                     </div>
@@ -43,12 +43,12 @@
                 <div class="col-md-8">
                     <div class="inner">
                         <div class="title-head">
-                            <h2><small>مجموعة سما</small></h2>
+                            <h2><small>{{ __('ABOUT SAMA') }}</small></h2>
                         </div>
                         <div class="mb-5">
-                            {!! $about->contentAr !!}
+                            {!! $about->content !!}
                         </div>
-                        <a href="{{ url('about/') }}" class="btn btn-outline-secondary">اقرأ المزيد</a>
+                        <a href="{{ url('about/') }}" class="btn btn-outline-secondary"> {{ __('Read more') }}</a>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                             <a href="{{ url('division/' . $division->id) }}"></a>
                             <figure><img src="{{ asset('images/division/' . $division->image) }}" alt="">
                             </figure>
-                            <h2>{{ $division->titleAr }}</h2>
+                            <h2>{{ $division->title }}</h2>
 
                         </div>
                     </div>
@@ -83,75 +83,62 @@
             <div class="row align-items-center justify-content-center">
                 <div class="item col-4 col-md-2 mb-4 text-white text-center">
                     <div class="d-flex gap-3 justify-content-center align-items-center">
-
-
                         <h1 class="fw-bold mt-2">
                             50
                         </h1>
-
-
                     </div>
-                    <p>عام من العطاء</p>
+                    <p>{{ __('Years of Giving') }}</p>
                 </div>
-
+    
                 <div class="item col-4 col-md-2 mb-4 text-white text-center">
                     <div class="d-flex gap-1 justify-content-center align-items-center">
-
                         <h1 class="fw-bold mt-2">
                             <span>+</span>12
                         </h1>
-
                     </div>
-                    <p> قـطـاع وتخصـص</p>
+                    <p>{{ __('Sectors and Specializations') }}</p>
                 </div>
+    
                 <div class="item col-4 col-md-2 mb-4 text-white text-center">
                     <div class="d-flex gap-3 justify-content-center align-items-center">
                         <h1 class="fw-bold mt-2">
                             <span>+</span>30
                         </h1>
-
                     </div>
-                    <p>جــســـر ونـفــق</p>
+                    <p>{{ __('Bridges and Tunnels') }}</p>
                 </div>
+    
                 <div class="item col-4 col-md-2 text-white text-center" style="margin-bottom:20px;">
                     <div class="d-flex gap-1 justify-content-center align-items-center">
-                        <h1 class="fw-bold  ">
+                        <h1 class="fw-bold ">
                             <span>+</span>1M
                         </h1>
-
-
                     </div>
-                    <p> كلم<sup>٢</sup> شــــوارع مسفلتة</p>
+                    <p>{{ __('km² Paved Streets') }}</p>
                 </div>
+    
                 <div class="item col-4 col-md-2 mb-4 text-white text-center">
                     <div class="d-flex gap-1 justify-content-center align-items-center">
                         <h1 class="fw-bold mt-2">
                             <span>+</span>300
                         </h1>
-
                     </div>
-                    <p>مـهنــدس وفــنـــي</p>
+                    <p>{{ __('Engineers and Technicians') }}</p>
                 </div>
-                <div class="item col-4 col-md-2  text-white text-center" style="margin-bottom:21px;">
+    
+                <div class="item col-4 col-md-2 text-white text-center" style="margin-bottom:21px;">
                     <div class="d-flex gap-1 justify-content-center align-items-center">
-
                         <span class="fw-bold">B</span>
                         <h1 class="fw-bold mt-2">
                             8.2
                         </h1>
-
-
-
-
                     </div>
-
-                    <p>قيمة المشاريع القائمة</p>
-
+                    <p>{{ __('Value of Ongoing Projects') }}</p>
                 </div>
-
             </div>
         </div>
     </div>
+    
 
 
     <div class="ads_section">
@@ -160,17 +147,17 @@
                 <div class="col-md-6 mb-3 p-md-5">
                     <div class="head text-center text-md-start">
                         @php
-                            $words = explode(' ', $adsprojects->titleAr, 2); // Split the string into two parts: first word and the rest
+                            $words = explode(' ', $adsprojects->title, 2); // Split the string into two parts: first word and the rest
                         @endphp
 
                         <h1 style="font-size: 80px">{{ $words[0] }}<br><span
                                 class="fw-bold">{{ $words[1] ?? '' }}</span></h1>
                         {{-- <h1 class="fw-bold mb-3">{{ $adsprojects->titleAr }}</h1> --}}
-                        <p class="mb-2" style="font-size: 50px">{{ $adsprojects->descriptionAr }}</p>
+                        <p class="mb-2" style="font-size: 50px">{{ $adsprojects->description }}</p>
                     </div>
                     <div class="text-center text-md-start w-md-100 ">
                         <p style="font-size: 25px; width:85%" class="text-md-start text-center m-auto m-md-1 ">
-                            {!! $adsprojects->contentAr !!}
+                            {!! $adsprojects->content !!}
                         </p>
                     </div>
                 </div>
@@ -203,7 +190,7 @@
     <div class="project section">
         <div class="container">
             <div class="text-center title-head">
-                <h2 class="mb-4">أبرز المشاريع</h2>
+                <h2 class="mb-4">{{ __('Highlighted Projects') }}</h2>
 
             </div>
             <div class="row gap-md-5 justify-content-center align-items-center m-auto">
@@ -219,7 +206,7 @@
                                 <div class="overlay"></div> <!-- Overlay background -->
                                 <div class="caption">
 
-                                    <h3>{{ $project->titleAr }}</h3>
+                                    <h3>{{ $project->title}}</h3>
                                 </div>
                         </div>
                         </a>
@@ -233,20 +220,22 @@
     <div class="contact section">
         <div class="container">
             <div class="title-head text-center">
-                <h2>اتصل بنا</h2>
+                <h2>{{ __('Contact Us') }}</h2>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="inner-contact">
-                        <h3>المكتب الرئيسي</h3>
+                        <h3>{{ __('Head Office') }}</h3>
                         <ul>
-                            <li><i class="fa-solid fa-location-dot"></i> 3939 طريق مكة المكرمة، حي الضباط
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i> 
+                                {{ __('3939 Makkah Road, Officers District') }}
                                 <br>
-                                صندوق البريد 27361 الرياض 12623
+                                {{ __('P.O. Box 27361, Riyadh 12623') }}
                                 <br>
-                                الرياض، المملكة العربية السعودية
+                                {{ __('Riyadh, Kingdom of Saudi Arabia') }}
                             </li>
-                            <li><i class="fa-solid fa-phone"></i> 4545454 11 966+ </li>
+                            <li><i class="fa-solid fa-phone"></i> 4545454 11 966+</li>
                             <li><i class="fa-solid fa-fax"></i> 4545454 11 966+</li>
                             <li><i class="fa-solid fa-mobile-screen-button"></i> 50100383 966+</li>
                             <li><i class="fa-solid fa-envelope"></i> contact@samaa-group.com</li>
@@ -260,6 +249,7 @@
             </div>
         </div>
     </div>
+    
 @endsection
 <style>
     .ads_section {

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,10 @@ use App\Http\Controllers\Admin\MessageController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::group([ 'middleware' => ['set_locale']], function () {
+
+    Route::get('/language/{lang}', [SettingController::class, 'changeLanguage'])->name('change-language');
+
 
 Route::get('/',[HomeController::class,'index']);
 Route::get('/about',[PageController::class,'about']);
@@ -30,3 +35,4 @@ Route::get('/project/{id}',[PageController::class,'projectSingle']);
 
 Route::get('contact',[MessageController::class,'index'])->name('contact.sitelayout');
 Route::post('contact',[MessageController::class,'store'])->name('contact.store');
+});

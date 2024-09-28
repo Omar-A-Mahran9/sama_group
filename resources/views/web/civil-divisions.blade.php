@@ -29,9 +29,9 @@
             </div>
             <div class="col-md-8">
                 <div class="inner-content divisio">
-                    <div class="row">
+                    <div class="row justify-content-center">
                         @foreach ($sections as $division)
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-6 ">
                                 <div class="item">
                                     <a href="{{ url('division/'.$division->id) }}"></a>
                                     <figure><img src="{{ asset('images/division/' . $division->image) }}" alt="">

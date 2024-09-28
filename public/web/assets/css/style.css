@@ -863,6 +863,10 @@ textarea.form-control {
   margin-bottom: 20px;
 }
 
+.rounded-1 {
+  width: 21px;
+}
+
 @media(max-width:500px){
   .project-container .swiper-container{
     width: 700px !important;
