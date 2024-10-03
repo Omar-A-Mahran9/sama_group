@@ -19,13 +19,13 @@
     </nav>
 
     <div class="container inner-content project">
-        {!! $project[0]->content!!}
-        <h3>{{__("Project images")}}</h3>
+        {!! $project[0]->content !!}
+        <h3>{{ __('Project images') }}</h3>
     </div>
     <div class="project-container">
 
 
-        <div class="row  ">
+        {{-- <div class="row  ">
             <div class="col-md-12 mb-3 pt-5 pb-5 swip">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -45,6 +45,25 @@
                     <div class="swiper-button-next"></div>
                 </div>
             </div>
+
+        </div> --}}
+
+        <div class="row  gap-md-4 justify-content-center  m-auto">
+            @php $gallery_ids = explode( ',', $project[0]->images ) @endphp
+
+            @foreach ($gallery_ids as $x)
+                <div class="col-md-3 col-6 mb-4" style="cursor: pointer;">
+                    <div class="item singleproj">
+
+                        <div class="itemproject">
+                            <figure><img src="{{ asset('images/projects/' . $x) }}" alt="" style="height: 200px">
+                            </figure>
+                        </div>
+
+                        </a>
+                    </div>
+                </div>
+            @endforeach
 
         </div>
     </div>
