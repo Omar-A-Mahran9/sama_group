@@ -63,7 +63,7 @@
                          <li><a href="{{ url('medical-divisions/') }}">{{ __('MEDICAL DIVISIONS') }}</a></li>
 
                      </ul>
-                     <ul id="primary-menu" class="d-flex align-items-center">
+                     <ul id="primary-menu" class="d-flex align-items-center"  dir="{{ isArabic() ? 'rtl' : 'ltr' }}">
 
                          <li><a href="{{ url('/') }}">{{ __('HOME') }}</a></li>
                          <li><a href="{{ url('about/') }}">{{ __('ABOUT SAMA') }}</a></li>

@@ -22,7 +22,7 @@
                     <div class="item-footer">
                         <h3 class="item-footer-h3">{{ __('Sectors') }}</h3>
                         <ul>
-                            <li><a href="{{ url('civil-divisions/') }}">{{ __('Civil Sector') }}</a></li>
+                            <li><a href="{{ url('civil-divisions/') }}">{{ __('CIVIL DIVISION') }}</a></li>
                             <li><a href="{{ url('medical-divisions/') }}">{{ __('MEDICAL DIVISIONS') }}</a></li>
                             <li><a href="{{ url('military-divisions/') }}">{{ __('MILITARY DIVISIONS') }}</a></li>
                         </ul>
@@ -58,6 +58,33 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="{{ asset('web/assets/js/script.js?v=1') }}"></script>
+<script>
+    document.querySelectorAll('img[data-enlargable]').forEach(function(img) {
+        img.classList.add('img-enlargable');
+        img.addEventListener('click', function() {
+            var src = img.getAttribute('src');
+            var overlay = document.createElement('div');
+
+            Object.assign(overlay.style, {
+                background: `RGBA(0,0,0,.5) url(${src}) no-repeat center`,
+                backgroundSize: 'contain',
+                width: '100%',
+                height: '100%',
+                position: 'fixed',
+                zIndex: '10000',
+                top: '0',
+                left: '0',
+                cursor: 'zoom-out'
+            });
+
+            overlay.addEventListener('click', function() {
+                document.body.removeChild(overlay);
+            });
+
+            document.body.appendChild(overlay);
+        });
+    });
+</script>
 </body>
 
 </html>

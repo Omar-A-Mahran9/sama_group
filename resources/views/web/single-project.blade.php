@@ -52,11 +52,12 @@
             @php $gallery_ids = explode( ',', $project[0]->images ) @endphp
 
             @foreach ($gallery_ids as $x)
-                <div class="col-md-3 col-6 mb-4" style="cursor: pointer;">
+                <div class="col-md-3 col-6 mb-4" style="cursor: zoom-in;">
                     <div class="item singleproj">
 
                         <div class="itemproject">
-                            <figure><img src="{{ asset('images/projects/' . $x) }}" alt="" style="height: 200px">
+                            <figure><img data-enlargable src="{{ asset('images/projects/' . $x) }}" alt=""
+                                    style="height: 200px">
                             </figure>
                         </div>
 
