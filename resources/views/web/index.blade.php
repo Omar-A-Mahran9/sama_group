@@ -18,10 +18,10 @@
                                 </div>
                             @endif
 
-                            <div class="caption">
+                            {{-- <div class="caption">
                                 <h2>{{ $slider->title }}</h2>
                                 <p class="mb-0">{!! $slider->content !!}</p>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 @endforeach
