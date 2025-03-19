@@ -17,11 +17,12 @@
             </ol>
         </div>
     </nav>
-     @if ($project[0]->images != null)
 
 
         <div class="container inner-content project">
             {!! $project[0]->content !!}
+            @if ($project[0]->images != null)
+
             <h3>{{ __('Project images') }}</h3>
         </div>
         <div class="project-container">
