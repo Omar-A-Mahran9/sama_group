@@ -46,7 +46,7 @@
     </div>
     <div class="footer-bottom">
         <div class="container">
-            <small>{{ __('All rights reserved to Sama Group &copy;') }} {{ date('Y') }}</small>
+            <small>{{ __('All rights reserved to Sama Group ©') }} {{ date('Y') }}</small>
         </div>
     </div>
 </footer>
