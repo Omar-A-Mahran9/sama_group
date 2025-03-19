@@ -34,8 +34,8 @@
                         <ul>
                             <li><i class="fa-solid fa-location-dot"></i>
                                 {{ __('3939 Makkah Road, Officers District') }}</li>
-                            <li><i class="fa-solid fa-phone"></i> 4545454 11 966+ </li>
-                            <li><i class="fa-solid fa-mobile-screen-button"></i> 50100383 966+</li>
+                            <li><i class="fa-solid fa-phone"></i> {{__('+966114545454')}}</li>
+                            <li><i class="fa-solid fa-mobile-screen-button"></i> {{__('+96650100383')}}</li>
                             <li><i class="fa-solid fa-envelope"></i> contact@samaa-group.com</li>
                         </ul>
                     </div>
