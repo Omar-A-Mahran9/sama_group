@@ -21,7 +21,7 @@
                                  src="{{ asset('web/assets/images/logo.png') }}" alt=""></a>
                          <button class="" data-navbar-btn><i class="fa-solid fa-xmark"></i></button>
                      </div>
-                     <ul id="primary-menu-two" class=" d-flex align-items-center">
+                     <ul id="primary-menu-two" class="d-flex align-items-center">
 
                          <li>
                              <div class=" ">

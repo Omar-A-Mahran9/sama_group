@@ -191,7 +191,7 @@ header {
   height: 100%;
   transform: translate(-50%, -50%) scale(1.1);
   /*Centerandscalethevideo*/object-fit: cover;
-  
+
   -webkit-transform: translate(-50%, -50%) scale(1.1);
   -moz-transform: translate(-50%, -50%) scale(1.1);
   -ms-transform: translate(-50%, -50%) scale(1.1);
@@ -335,9 +335,9 @@ header {
 .ads_section .swip{
   overflow: hidden;
  }
- 
 
- 
+
+
 
 .divisio .item::after {
   content: '';
@@ -351,7 +351,7 @@ header {
   height: 100%; /* Make the gradient cover the entire item on hover */
   background-image: linear-gradient(0deg, #128977ab, #1289779b); /* Full background */
 }
- 
+
 
 /* project section */
 
@@ -529,10 +529,10 @@ header {
   background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity for your overlay */
   z-index: 1;
 }
- 
 
 
- 
+
+
 
 
 /* Show the caption and overlay on hover */
@@ -699,8 +699,8 @@ header {
    border-bottom: 5px solid white;
   margin: auto;}
 
- 
- 
+
+
 
 .head-page .container {
   padding-block-start: 179px;
@@ -820,7 +820,7 @@ textarea.form-control {
    background-repeat: no-repeat; /* Prevents the background from repeating */
    background-attachment: fixed; /* Keeps the background fixed during scrolling */
 
-   
+
 }
 
 
@@ -830,7 +830,7 @@ textarea.form-control {
   transition: transform 0.3s ease; /* Adjust the duration and timing function as needed */
 }
 
- 
+
 
 
 .aboutt::before {
@@ -901,8 +901,8 @@ textarea.form-control {
     height:100% !important;
   }
 
- 
- 
+
+
 }
 
 @media(max-width:1400px){
@@ -910,7 +910,7 @@ textarea.form-control {
     width: 250px !important;
     height:250px !important;
   }
- 
+
 }
 
 @media (max-width:992px) {
@@ -925,7 +925,7 @@ textarea.form-control {
     overflow: hidden; /* Hide any overflow to ensure the image doesn't spill outside the container */
     position: relative; /* Positioning context for the img */
   }
-  
+
 .singleproj{
   width: 150px !important;
   height:150px !important;
@@ -939,7 +939,7 @@ textarea.form-control {
     margin-bottom: 50px;
    }
 
- 
+
   #prod>.row>.col-12,#enviro>.row>.col-12{
 
   padding-right: 0px !important;
@@ -953,8 +953,8 @@ textarea.form-control {
   #history>p,#value>p,#enviro>.row>.col-12>p{
     font-size: 14px;
   }
- 
-  
+
+
   .about,.divisio{
     padding: 30px;
   }
@@ -966,30 +966,30 @@ textarea.form-control {
     width: 160px;
     height: 160px;
   }
-  
+
   .divisio .item>h2 {
     font-size: 22px !important;
   }
   .results h1,h1>span{
     font-size: 30px;
   }
- 
+
   .results p{
     font-size: 15px;
   }
- 
+
   .video-container{
     display: none;
   }
   header nav {
     position: fixed;
     background: #FFF;
-    width: 250px;
+    width: 100%;
     top: 0;
     height: 100dvh;
     right: 0;
     padding: 35px 20px;
-    transform: translateX(250px);
+    transform: translateX(500px);
     transition: 300ms ease;
     z-index: 2;
   }
