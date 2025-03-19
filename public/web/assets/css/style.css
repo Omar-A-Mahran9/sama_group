@@ -743,6 +743,8 @@ nav[aria-label="breadcrumb"] {
   background: #eee;
   padding: 13px 27px;
   /* width: calc(33.3333% - 16px); */
+    width: 100%;
+
   flex: 0 0 auto;
   display: grid;
   place-items: center;
