@@ -17,7 +17,9 @@
             </ol>
         </div>
     </nav>
-    @if ($project[0]->images)
+    @php $gallery_idss = explode( ',', $project[0]->images ) @endphp
+
+    @if (count($gallery_idss) > 0)
 
 
         <div class="container inner-content project">
