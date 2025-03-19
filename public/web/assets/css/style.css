@@ -742,7 +742,7 @@ nav[aria-label="breadcrumb"] {
 .inner-content.divisions ul li {
   background: #eee;
   padding: 13px 27px;
-  width: calc(33.3333% - 16px);
+  /* width: calc(33.3333% - 16px); */
   flex: 0 0 auto;
   display: grid;
   place-items: center;
