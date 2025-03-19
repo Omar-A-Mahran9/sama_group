@@ -4,6 +4,8 @@
      <link rel="stylesheet" href="{{ asset('web/assets/css/bootstrap.rtl.min.css') }}">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
      <link rel="stylesheet" href="{{ asset('web/assets/css/all.min.css') }}">
+     <link rel="icon" type="image/png" href="{{ asset('web/assets/images/favicon.svg') }}">
+
      <link rel="stylesheet" href="{{ asset('web/assets/css/style.css?v=1') }}">
      <title>مجموعة سما@yield('title')</title>
  </head>
@@ -63,7 +65,7 @@
                          <li><a href="{{ url('medical-divisions/') }}">{{ __('MEDICAL DIVISIONS') }}</a></li>
 
                      </ul>
-                     <ul id="primary-menu" class="d-flex align-items-center"  dir="{{ isArabic() ? 'rtl' : 'ltr' }}">
+                     <ul id="primary-menu" class="d-flex align-items-center" dir="{{ isArabic() ? 'rtl' : 'ltr' }}">
 
                          <li><a href="{{ url('/') }}">{{ __('HOME') }}</a></li>
                          <li><a href="{{ url('about/') }}">{{ __('ABOUT SAMA') }}</a></li>

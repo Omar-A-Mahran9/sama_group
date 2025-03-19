@@ -17,15 +17,17 @@
             </ol>
         </div>
     </nav>
-
-    <div class="container inner-content project">
-        {!! $project[0]->content !!}
-        <h3>{{ __('Project images') }}</h3>
-    </div>
-    <div class="project-container">
+    @if ($project[0]->images)
 
 
-        {{-- <div class="row  ">
+        <div class="container inner-content project">
+            {!! $project[0]->content !!}
+            <h3>{{ __('Project images') }}</h3>
+        </div>
+        <div class="project-container">
+
+
+            {{-- <div class="row  ">
             <div class="col-md-12 mb-3 pt-5 pb-5 swip">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -48,25 +50,25 @@
 
         </div> --}}
 
-        <div class="row  gap-md-4 justify-content-center  m-auto">
-            @php $gallery_ids = explode( ',', $project[0]->images ) @endphp
+            <div class="row  gap-md-4 justify-content-center  m-auto">
+                @php $gallery_ids = explode( ',', $project[0]->images ) @endphp
 
-            @foreach ($gallery_ids as $x)
-                <div class="col-md-3 col-6 mb-4" style="cursor: zoom-in;">
-                    <div class="item singleproj">
+                @foreach ($gallery_ids as $x)
+                    <div class="col-md-3 col-6 mb-4" style="cursor: zoom-in;">
+                        <div class="item singleproj">
 
-                        <div class="itemproject">
-                            <figure><img data-enlargable src="{{ asset('images/projects/' . $x) }}" alt=""
-                                    style="height: 200px">
-                            </figure>
+                            <div class="itemproject">
+                                <figure><img data-enlargable src="{{ asset('images/projects/' . $x) }}" alt=""
+                                        style="height: 200px">
+                                </figure>
+                            </div>
+
+                            </a>
                         </div>
-
-                        </a>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
 
+            </div>
         </div>
-    </div>
-
+    @endif
 @endsection
