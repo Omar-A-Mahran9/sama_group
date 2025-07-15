@@ -659,7 +659,7 @@ header {
   margin-block-end: .5em;
 }
 
-p.hide_title {
+p.caption.hide_title {
     display: none;
 }
 
