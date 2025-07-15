@@ -30,7 +30,7 @@
 
                                 @if (!empty($gallery_ids[0]))
                                     <figure>
-                                        <img src="{{ asset('images/projects/' . $gallery_ids[0]) }}" alt="">
+                                        <img src="{{ asset('images/projects/' . $project->image) }}" alt="">
                                     </figure>
                                 @endif,
                                 <div class="caption">
