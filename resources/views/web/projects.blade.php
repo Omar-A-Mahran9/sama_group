@@ -34,7 +34,7 @@
                                     </figure>
                                 @endif,
                                 <div class="caption">
-                                    <h3>{{ $project->title }}</h3>
+                                    <div>{!! $project->title !!}</div>
                                     {{-- <p class="mb-0">{!! $project->descriptionAr !!}</p> --}}
                                 </div>
                             </a>
@@ -45,3 +45,10 @@
         </div>
     </div>
 @endsection
+@push('styles')
+    <style>
+        p .hide_title {
+            display: none !important;
+        }
+    </style>
+@endpush

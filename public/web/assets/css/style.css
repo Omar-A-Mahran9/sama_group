@@ -659,6 +659,10 @@ header {
   margin-block-end: .5em;
 }
 
+p.hide_title {
+    display: none;
+}
+
 .item-footer-contact ul li i {
   margin-inline-end: 10px;
 }
@@ -672,7 +676,7 @@ header {
 }
 
 .head-page {
-  height: 300px;
+  height: 600px;
   margin-block-end: 16px;
   position: relative;
   background-position: center;
