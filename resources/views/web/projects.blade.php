@@ -28,11 +28,9 @@
                         <div class="item singleproj">
                             <a href="{{ url('project/' . $project->id) }}">
 
-                                @if (!empty($gallery_ids[0]))
-                                    <figure>
-                                        <img src="{{ asset('images/projects/' . $project->image) }}" alt="">
-                                    </figure>
-                                @endif,
+                                <figure>
+                                    <img src="{{ asset('images/projects/' . $project->image) }}" alt="">
+                                </figure>
                                 <div class="caption">
                                     <div>{!! $project->title !!}</div>
                                     {{-- <p class="mb-0">{!! $project->descriptionAr !!}</p> --}}
