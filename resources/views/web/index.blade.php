@@ -157,7 +157,7 @@
 
                                 <figure>
                                     @php $gallery_ids = explode( ',', $project->images ) @endphp
-                                    <img src="{{ asset('images/projects/' . $gallery_ids[0]) }}" alt="">
+                                    <img src="{{ asset('images/projects/' . $project[0]->image) }}" alt="">
                                 </figure>
                                 <div class="overlay"></div> <!-- Overlay background -->
                                 <div class="caption">
