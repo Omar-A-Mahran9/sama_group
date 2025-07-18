@@ -140,51 +140,7 @@
     </div>
 
 
-
-    <div class="ads_section">
-        <div class="container">
-            <div class="row align-items-end">
-                <div class="col-md-6 mb-3 p-md-5">
-                    <div class="head text-center text-md-start">
-                        @php
-                            $words = explode(' ', $adsprojects->title, 2); // Split the string into two parts: first word and the rest
-                        @endphp
-
-                        <h1 style="font-size: 80px">{{ $words[0] }}<br><span
-                                class="fw-bold">{{ $words[1] ?? '' }}</span></h1>
-                        {{-- <h1 class="fw-bold mb-3">{{ $adsprojects->titleAr }}</h1> --}}
-                        <p class="mb-2" style="font-size: 50px">{{ $adsprojects->description }}</p>
-                    </div>
-                    <div class="text-center text-md-start w-md-100 ">
-                        <p style="font-size: 25px; width:85%" class="text-md-start text-center m-auto m-md-1 ">
-                            {!! $adsprojects->content !!}
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3 pt-5 pb-5 swip">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            @php $gallery_ids = explode(',', $adsprojects->images) @endphp
-                            @foreach ($gallery_ids as $x)
-                                <div class="swiper-slide">
-                                    <div class="item card">
-                                        <figure><img src="{{ asset('images/projects/' . $x) }}" alt="">
-                                        </figure>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
-                        <!-- Add Navigation -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+ 
 
 
     <div class="project section">

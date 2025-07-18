@@ -1,3 +1,34 @@
+const projectSwiper = new Swiper(".project-swiper", {
+    loop: true,
+    slidesPerView: 3, // عدد الصور في كل سلايد
+    spaceBetween: 20, // مسافة بين الصور
+    speed: 1500, // سرعة الانتقال بين السلايدات
+    autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+    },
+    effect: "slide", // بدون أي تأثير ثلاثي الأبعاد
+    pagination: {
+        el: ".project-swiper .swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".project-swiper .swiper-button-next",
+        prevEl: ".project-swiper .swiper-button-prev",
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        576: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+    },
+});
+
 const swiper = new Swiper(".swiper", {
     loop: true, // Enable looping
     autoplay: {
@@ -11,7 +42,6 @@ const swiper = new Swiper(".swiper", {
     effect: "fade", // You can use other effects like 'fade', 'cube', 'coverflow'
 
     speed: 1500, // Transition speed
- 
 });
 
 const swiperDivisio = new Swiper(".divisio .swiper", {
@@ -56,7 +86,7 @@ var animate_swiper = new Swiper(".swiper-container", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    effect: "coverflow", // You can use other effects like 'fade', 'cube', 'coverflow'
+    effect: "slide", // You can use other effects like 'fade', 'cube', 'coverflow'
     speed: 1500, // Transition speed
 });
 

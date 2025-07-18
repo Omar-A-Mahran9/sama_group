@@ -658,7 +658,28 @@ header {
 .item-footer-contact ul li {
   margin-block-end: .5em;
 }
+.project-swiper {
+    position: relative; /* علشان الأسهم والبوليتس تكون داخله */
+    overflow: hidden;   /* يمنع أي عنصر يخرج */
+    max-width: 100%;    /* يخليه ما يتعداش الكونتينر */
+}
 
+.project-swiper .swiper-button-next,
+.project-swiper .swiper-button-prev {
+    color: #000;               /* أو أي لون مناسب */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.project-swiper .swiper-pagination {
+    position: relative;        /* بدل absolute */
+    bottom: auto;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+ 
 p.caption.hide_title {
     display: none;
 }

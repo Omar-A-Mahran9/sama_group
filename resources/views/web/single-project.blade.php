@@ -26,32 +26,32 @@
             {!! app()->getLocale() === 'ar' ? $project[0]->contentAr : $project[0]->contentEn !!}
         </div>
 
-        {{-- Swiper Image Slider --}}
-        @if ($project[0]->images)
-            <h4 class="fw-bold mt-5 mb-4 text-center">{{ __('Project images') }}</h4>
+  @if ($project[0]->images)
+    <h4 class="fw-bold mt-5 mb-4 text-center">{{ __('Project images') }}</h4>
 
-            <div class="swiper-container project-swiper mb-5">
-                <div class="swiper-wrapper">
-                    @php $gallery_ids = explode(',', $project[0]->images) @endphp
-                    @foreach ($gallery_ids as $x)
-                        <div class="swiper-slide">
-                            <div class="text-center" style="cursor: zoom-in;">
-                                <figure>
-                                    <img data-enlargable src="{{ asset('images/projects/' . trim($x)) }}"
-                                        alt="Project Image" class="img-fluid rounded"
-                                        style="width: 100%; height: 300px; object-fit: cover;">
-                                </figure>
-                            </div>
-                        </div>
-                    @endforeach
+    {{-- زر الإغلاق --}}
+ 
+    <div class="swiper-container project-swiper mb-5">
+        <div class="swiper-wrapper">
+            @php $gallery_ids = explode(',', $project[0]->images) @endphp
+            @foreach ($gallery_ids as $x)
+                <div class="swiper-slide">
+                    <div class="text-center" style="cursor: zoom-in;">
+                        <figure>
+                            <img data-enlargable src="{{ asset('images/projects/' . trim($x)) }}"
+                                alt="Project Image" class="img-fluid"
+                                style="width: 100%; height: 300px; object-fit: cover;">
+                        </figure>
+                    </div>
                 </div>
+            @endforeach
+        </div>
 
-                <!-- Swiper Controls -->
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        @endif
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination mt-3"></div>
+    </div>
+@endif
 
     </div>
 @endsection
