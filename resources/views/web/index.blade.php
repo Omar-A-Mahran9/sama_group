@@ -140,7 +140,7 @@
     </div>
 
 
- 
+
 
 
     <div class="project section">
@@ -162,7 +162,7 @@
                                 <div class="overlay"></div> <!-- Overlay background -->
                                 <div class="caption">
 
-                                    <h3>{{ $project->title }}</h3>
+                                    {!! $project->title !!}
                                 </div>
                         </div>
                         </a>
